@@ -17,3 +17,5 @@ Start-Process -Wait -FilePath msiexec -ArgumentList '/quiet /i ./build/Seq.msi W
 if ($LASTEXITCODE) { exit 1 }
 
 $env:Path = "$pwd/.dotnetcli;`"C:\Program Files\Seq`";$env:Path"
+
+seq version
