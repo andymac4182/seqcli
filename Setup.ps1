@@ -15,3 +15,5 @@ Invoke-WebRequest "https://datalust.co/download/begin?version=2020.3.4761" -outf
 Get-ChildItem -Path "./build"
 Start-Process -Wait -FilePath msiexec -ArgumentList '/quiet /i ./build/Seq.msi WIXUI_EXITDIALOGOPTIONALCHECKBOX=0 INSTALLFOLDER="C:\Program Files\Seq"'
 if ($LASTEXITCODE) { exit 1 }
+
+$env:Path = "$pwd/.dotnetcli;`"C:\Program Files\Seq`";$env:Path"
