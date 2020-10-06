@@ -18,4 +18,8 @@ if ($LASTEXITCODE) { exit 1 }
 
 $env:Path = "$pwd/.dotnetcli;`"C:\Program Files\Seq`";$env:Path"
 
+Write-Host $env:Path
+
+Get-ChildItem -Path "C:\Program Files\Seq"
+
 seq version
